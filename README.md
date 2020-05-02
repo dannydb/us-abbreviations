@@ -12,17 +12,17 @@ Requiring the module returns a U.S. abbreviations constructor that takes
 two keys as parameters: `from` and `to`. It's probably easiest to create
 a converter by immediately setting these parameters:
 
-    var convertStatesToPostStyle = require('us-abbreviations')('full', 'post');
+    var convertStatesToPostStyle = require('us-abbreviations')('full', 'times');
 
-    convertStatesToPostStyle('California');
-        => 'Calif.'
+    convertStatesToTimesStyle('Texas');
+        => 'Texas'
 
-    convertStatesToPostStyle('New York');
+    convertStatesToTimesStyle('New York');
         => 'N.Y.'
 
     var convertFIPSToFull = require('us-abbreviations')('fips', 'full');
 
-    convertStatesToPostStyle('01');
+    convertStatesToTimesStyle('01');
         => 'Alabama'
 
 ### Available keys:
@@ -45,7 +45,7 @@ a converter by immediately setting these parameters:
     * Alaska => `AZ`
     * Arizona => `AR`
 
-**'post'** – Washington Post style (similar to AP style)
+**'times'** – New York Times style (similar to AP style)
 
     * Alabama => `Ala.`
     * Alaska => `Alaska`
